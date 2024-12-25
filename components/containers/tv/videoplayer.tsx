@@ -166,7 +166,7 @@ export default function VideoPlayer({ id }: { id: string }) {
         </div>
         <TabsContent value="autoembed">
           <iframe
-            src={`https://player.autoembed.cc/embed/tv/${id}/${season}/${episode}`}
+            src={`https://embed.smashystream.com/playere.php?tmdb=${season}/${episode}?playerList=D|SM`}
             referrerPolicy="origin"
             allowFullScreen
             width="100%"
