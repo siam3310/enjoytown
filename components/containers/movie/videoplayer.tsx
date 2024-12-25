@@ -20,15 +20,7 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Download } from 'lucide-react';
 
-type VideoSourceKey =
-  | 'autoembed'
-  | 'embedsu'
-  | 'vidsrc'
-  | 'superembed'
-  | 'twoembed'
-  | 'vidlink'
-  | 'vidsrcdev'
-  | 'vidsrcnl';
+type VideoSourceKey = 'autoembed' | 'embedsu';
 
 export default function VideoPlayer({ id }: any) {
   const [selectedSource, setSelectedSource] = useState<VideoSourceKey>('autoembed');
@@ -37,12 +29,6 @@ export default function VideoPlayer({ id }: any) {
   const videoSources: Record<VideoSourceKey, string> = {
     autoembed: `https://embed.smashystream.com/playere.php?tmdb=${id}?playerList=D|SM`,
     embedsu: `https://embed.su/embed/movie/${id}`,
-    vidsrc: `https://vidsrc.in/embed/movie/${id}`,
-    superembed: `https://multiembed.mov/?video_id=${id}&tmdb=1`,
-    twoembed: `https://www.2embed.cc/embed/${id}`,
-    vidlink: `https://vidlink.pro/movie/${id}`,
-    vidsrcdev: `https://vidsrc.dev/embed/movie/${id}`,
-    vidsrcnl: `https://player.vidsrc.nl/embed/movie/${id}`,
   };
 
   const handleSelectChange = (value: VideoSourceKey) => {
@@ -81,12 +67,6 @@ export default function VideoPlayer({ id }: any) {
             <SelectContent>
               <SelectItem value="autoembed">AutoEmbed</SelectItem>
               <SelectItem value="embedsu">EmbedSu</SelectItem>
-              <SelectItem value="vidsrc">VidSrc</SelectItem>
-              <SelectItem value="superembed">SuperEmbed</SelectItem>
-              <SelectItem value="twoembed">2Embed</SelectItem>
-              <SelectItem value="vidlink">VidLink</SelectItem>
-              <SelectItem value="vidsrcdev">VidSrcDev</SelectItem>
-              <SelectItem value="vidsrcnl">VidSrcnl</SelectItem>
             </SelectContent>
           </Select>
           <div className="pt-2">
