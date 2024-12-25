@@ -35,7 +35,7 @@ export default function VideoPlayer({ id }: any) {
   const [loading, setLoading] = useState(false);
 
   const videoSources: Record<VideoSourceKey, string> = {
-    autoembed: `https://player.autoembed.cc/embed/movie/${id}`,
+    autoembed: `https://embed.smashystream.com/playere.php?tmdb=${id}?playerList=D|SM`,
     embedsu: `https://embed.su/embed/movie/${id}`,
     vidsrc: `https://vidsrc.in/embed/movie/${id}`,
     superembed: `https://multiembed.mov/?video_id=${id}&tmdb=1`,
