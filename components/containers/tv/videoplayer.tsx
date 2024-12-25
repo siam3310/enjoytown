@@ -142,7 +142,7 @@ export default function VideoPlayer({ id }: { id: string }) {
             </div>
           </div>
           <div className="pt-2">
-            <Link href={`https://dl.vidsrc.vip/tv/${id}/${season}/${episode}`}>
+            <Link href={`https://player.smashy.stream/tv/${id}?s=${season}&e=${episode}`}>
               <Badge variant="outline" className="cursor-pointer whitespace-nowrap">
                 <Download className="mr-1.5" size={12} />
                 Download {season}-{episode}
@@ -154,7 +154,7 @@ export default function VideoPlayer({ id }: { id: string }) {
       <Tabs defaultValue="autoembed">
         <div className="flex flex-col items-center">
           <TabsList>
-            <TabsTrigger value="autoembed">AutoEmbed</TabsTrigger>
+            <TabsTrigger value="autoembed">Best Server</TabsTrigger>
             <TabsTrigger value="embedsu">EmbedSu</TabsTrigger>
             <TabsTrigger value="vidsrc">VidSrc</TabsTrigger>
             <TabsTrigger value="superembed">SuberEmbed</TabsTrigger>
@@ -166,7 +166,7 @@ export default function VideoPlayer({ id }: { id: string }) {
         </div>
         <TabsContent value="autoembed">
           <iframe
-            src={`https://embed.smashystream.com/playere.php?tmdb=${season}/${episode}?playerList=D|SM`}
+            src={`https://player.smashy.stream/tv/${id}?s=${season}&e=${episode}`}
             referrerPolicy="origin"
             allowFullScreen
             width="100%"
